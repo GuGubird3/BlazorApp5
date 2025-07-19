@@ -1,0 +1,120 @@
+# Visual Studio temporary files, build results, and package caches
+###############################################################################
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ts.rsgen
+*.tt.synctable
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+bld/
+[Bb]in/
+[Oo]bj/
+*.bak
+*.swp
+*.tmp
+_ReSharper*/
+[Pp]ublish/
+[Pp]ublished/
+*.nupkg
+*.snupkg
+packages/
+*.cache
+ClientApp/node_modules/
+
+# NuGet Packages
+###############################################################################
+packages/
+
+# Files built by the project
+###############################################################################
+*.dll
+*.pdb
+*.exe
+*.cache
+*. ছড়িয়ে
+*.manifest
+*.map
+*.js.map
+
+# Visual Studio files
+###############################################################################
+_UpgradeReport_Files/
+*.vspscc
+*.vssscc
+*.vsdps
+*.sqlexe
+*.Cache
+*.VC.db
+*.opendb
+*.tlog
+*.sdf
+ipch/
+*.log
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.exp
+*.lib
+*.sbr
+
+# Build Results of an ATL Project
+###############################################################################
+[Dd]ll/[Rr]elease/
+[Dd]ll/[Dd]ebug/
+
+# Artifacts produced by the Qt Visual Studio Add-in
+###############################################################################
+*.moc
+*.rcc
+*.ui
+
+# Chutzpah Test files
+###############################################################################
+_Chutzpah*
+
+# SQL Server support
+###############################################################################
+*.mdf
+*.ldf
+
+# Windows meta files
+###############################################################################
+*.wmf
+*.emf
+*.cur
+*.ico
+
+# JSHint files
+###############################################################################
+.jshintrc
+
+# Browser files
+###############################################################################
+*.crdownload
+
+# Code Analysis files
+###############################################################################
+*.ruleset
+
+# Package Restore Related
+###############################################################################
+packages.config
+*.targets
+project.json
+project.lock.json
+
+# StyleCop files
+###############################################################################
+StyleCopReportHtml.htm
+*.StyleCop

@@ -1,0 +1,59 @@
+﻿@page "/counter"
+@using MudBlazor.Examples.Data.Models
+@inject HttpClient httpClient
+@inject IHttpClientFactory HttpClientFactory
+@using BlazorApp5.ApiServers
+@inject ApiService ApiService
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>TestString</th>
+            </tr>
+        </thead>
+        <tbody>
+
+                <tr>
+                    <td>@httpString</td>
+                </tr>
+
+        </tbody>
+    </table>
+
+@code {
+    private int currentCount = 0;
+
+    string httpString = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var httpClient = HttpClientFactory.CreateClient("ServerAPI");
+        try
+        {
+            httpString = await ApiService.GetTestStringAsync("ServerAPI", "webapi/test");
+            //httpString = await httpClient.GetStringAsync("webapi/test");
+            // 在这里你可以对 httpString 进行处理，例如反序列化 JSON 数据
+            // 如果你需要将 JSON 字符串转换为对象，可以使用 System.Text.Json 或 Newtonsoft.Json
+            // 例如：
+            // var elements = System.Text.Json.JsonSerializer.Deserialize<List<Element>>(httpString);
+        }
+        catch (Exception ex)
+        {
+        // 处理异常
+        Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
