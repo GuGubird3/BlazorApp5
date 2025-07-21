@@ -4,6 +4,7 @@ using BlazorApp5.MES.Examples.Data;
 using BlazorApp5.Servers;
 using MudBlazor.Examples.Data;
 using MudBlazor.Services;
+using System.Text.Json;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +24,7 @@ builder.Services.AddSingleton<IPeriodicTableService, PeriodicTableService>();
 
 builder.Services.AddSingleton<ItestService, testService>();
 
-builder.Services.AddSingleton<ImesLineService, mesLineService>();
+builder.Services.AddScoped<ImesLineService, mesLineService>();
 
 builder.Services.AddCors(options =>
 {
@@ -42,6 +43,15 @@ builder.Services.AddHttpClient("ServerAPI", client =>
 });
 
 builder.Services.AddSingleton<ApiService>();
+
+builder.Services.AddSingleton(new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true,
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+    WriteIndented = true
+});
+
+
 
 var app = builder.Build();
 

@@ -2,8 +2,8 @@
 
 namespace BlazorApp5.MES.Examples.Data
 {
-    public class ImesLineService
+    public interface ImesLineService
     {
-        Task<IEnumerable<LineItem>> GetLineItems(string apiUrl);
+        Task<IEnumerable<LineItem>> GetLineItems();
     }
 }

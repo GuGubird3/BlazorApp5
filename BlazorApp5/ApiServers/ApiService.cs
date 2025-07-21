@@ -38,6 +38,8 @@ namespace BlazorApp5.ApiServers
             var client = _httpClientFactory.CreateClient($"{httpclientName}");
             try
             {
+                var fullUrl = $"{client.BaseAddress}{routName}";
+                Console.WriteLine($"Request URL: {fullUrl}");
                 var response = await client.GetFromJsonAsync<List<Element>>($"{routName}");
                 if (response == null)
                 {

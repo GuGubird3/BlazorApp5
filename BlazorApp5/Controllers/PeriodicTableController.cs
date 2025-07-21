@@ -5,8 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using MudBlazor.Examples.Data;
 using MudBlazor.Examples.Data.Models;
 using System.Collections.Generic;
-using System.Text.Json;
 using System.Xml.Linq;
+using Newtonsoft.Json;
+
 
 
 
@@ -93,52 +94,21 @@ public class linetableController : ControllerBase
     }
 
 
-    [HttpPost("data")]
+    [HttpGet]
     public async Task<ActionResult<List<LineItem>>> GetElements()
     {
         try
         {
-            // 1. 模拟从 HTTP URL 获取 JSON 数据
-            string jsonString = @"
-                                    [
-                                      {
-                                        ""LineItems"": [
-                                          ""string1"",
-                                          ""string2"",
-                                          ""string3"",
-                                          ""string4""
-                                        ]
-                                      },
-                                      {
-                                        ""LineItems"": [
-                                          ""string5"",
-                                          ""string6"",
-                                          ""string7"",
-                                          ""string8""
-                                        ]
-                                      }
-                                    ]";
 
-            // 2. 反序列化 JSON 数据
-            List<LineItem>? data = JsonSerializer.Deserialize<List<LineItem>>(jsonString);
-
-            if (data == null || !data.Any())
+            IEnumerable<LineItem> lineItems = await _imesLineService.GetLineItems();
+            if (lineItems == null || !lineItems.Any())
             {
                 return BadRequest("数据不能为空");
             }
 
-            // 在这里处理接收到的数据
-            Console.WriteLine($"===> 接收到的元素数量: {data.Count()}");
+            Console.WriteLine($"===> 接收到的元素数量: {lineItems.Count()}");
 
-            foreach (var LineItemGroup in data)
-            {
-                if (LineItemGroup.LineItems != null)
-                {
-                    Console.WriteLine($"元素值: {string.Join(", ", LineItemGroup.LineItems)}");
-                }
-            }
-
-            return Ok(data.ToList()); // 转换为 List<Element> 并返回 HTTP 200
+            return Ok(lineItems.ToList()); // 转为 List<LineItem>
         }
         catch (JsonException ex)
         {
