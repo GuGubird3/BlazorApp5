@@ -1,5 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using MudBlazor.Examples.Data.Models;
+using MudBlazor.Examples.Data;
+
 
 namespace BlazorApp5.ApiServers
 {
@@ -29,5 +32,29 @@ namespace BlazorApp5.ApiServers
                 throw;
             }
         }
+
+        public async Task<List<Element>> GetTestElementAsync(string httpclientName, string routName)
+        {
+            var client = _httpClientFactory.CreateClient($"{httpclientName}");
+            try
+            {
+                var response = await client.GetFromJsonAsync<List<Element>>($"{routName}");
+                if (response == null)
+                {
+                    throw new Exception("Response was null");
+                }
+                else
+                {
+                    return response;
+                }
+            }
+            catch (Exception ex)
+            {
+                // 处理异常
+                Console.WriteLine($"Error fetching test string: {ex.Message}");
+                throw;
+            }
+        }
+
     }
 }

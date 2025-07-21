@@ -1,0 +1,18 @@
+﻿[
+  {
+    "LineItems": [
+      "string1",
+      "string2",
+      "string3",
+      "string4"
+    ]
+  },
+  {
+    "LineItems": [
+      "string5",
+      "string6",
+      "string7",
+      "string8"
+    ]
+  }
+]

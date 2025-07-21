@@ -3,6 +3,8 @@
 @using MudBlazor.Examples.Data.Models
 @inject HttpClient httpClient
 @inject IHttpClientFactory HttpClientFactory
+@using BlazorApp5.ApiServers
+@inject ApiService ApiService
 
 <PageTitle>Line Config</PageTitle>
 
@@ -71,8 +73,8 @@ Welcome to your new app.
 
     protected override async Task OnInitializedAsync()
     {
-        var httpClient = HttpClientFactory.CreateClient("ServerAPI");
-        Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable");
+        //var httpClient = HttpClientFactory.CreateClient("ServerAPI");
+        Elements = await ApiService.GetTestElementAsync("ServerAPI","webapi/linetable");
     }
 
     // events

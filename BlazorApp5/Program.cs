@@ -1,5 +1,6 @@
 using BlazorApp5.ApiServers;
 using BlazorApp5.Components;
+using BlazorApp5.MES.Examples.Data;
 using BlazorApp5.Servers;
 using MudBlazor.Examples.Data;
 using MudBlazor.Services;
@@ -21,6 +22,8 @@ builder.Services.AddMudServices(); // This includes IEventListenerFactory
 builder.Services.AddSingleton<IPeriodicTableService, PeriodicTableService>();
 
 builder.Services.AddSingleton<ItestService, testService>();
+
+builder.Services.AddSingleton<ImesLineService, mesLineService>();
 
 builder.Services.AddCors(options =>
 {
