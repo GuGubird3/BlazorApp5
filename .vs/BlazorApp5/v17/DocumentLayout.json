@@ -1,37 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GithubR\\BlazorApp5\\",
+  "WorkspaceRootPath": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\pages\\lineconfig.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\pages\\lineconfig.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\mes.examples.data\\models\\lineitemgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\models\\lineitemgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\mes.examples.data\\imeslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\imeslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\controllers\\periodictablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\controllers\\periodictablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\mes.examples.data\\meslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\meslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\pages\\bomimport.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\pages\\bomimport.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\pages\\plclist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\pages\\plclist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\pages\\bomlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\pages\\bomlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\mes.examples.data\\models\\linetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\mes.examples.data\\models\\linetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\models\\linetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\githubr\\blazorapp5\\blazorapp5\\blazorapp5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\controllers\\periodictablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\controllers\\periodictablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\apiservers\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\apiservers\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\mes.examples.data\\meslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\meslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\mes.examples.data\\imeslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\imeslineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\mes.examples.data\\models\\lineitemgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\mes.examples.data\\models\\lineitemgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|d:\\c\u002B\u002B\u002B\u002B\\git\\blazorapp5\\blazorapp5\\blazorapp5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{06F5B773-4A0C-4DCF-BD31-5E5061F79CAB}|BlazorApp5\\BlazorApp5.csproj|solutionrelative:blazorapp5\\blazorapp5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -42,28 +78,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T07:43:56.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T05:50:09.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\ApiServers\\ApiService.cs",
+              "RelativeDocumentMoniker": "BlazorApp5\\ApiServers\\ApiService.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\ApiServers\\ApiService.cs",
+              "RelativeToolTip": "BlazorApp5\\ApiServers\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T00:14:43.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Program.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Program.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\Program.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Program.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Program.cs",
               "RelativeToolTip": "BlazorApp5\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T15:42:18.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "ImesLineService.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
               "RelativeToolTip": "BlazorApp5\\MES.Examples.Data\\ImesLineService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -72,50 +147,140 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "mesLineService.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
               "RelativeToolTip": "BlazorApp5\\MES.Examples.Data\\mesLineService.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAwEkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T14:53:20.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlazorApp5",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\BlazorApp5.csproj",
+              "DocumentIndex": 16,
+              "Title": "BlazorApp5.csproj",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\BlazorApp5.csproj",
               "RelativeDocumentMoniker": "BlazorApp5\\BlazorApp5.csproj",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\BlazorApp5.csproj",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\BlazorApp5.csproj",
               "RelativeToolTip": "BlazorApp5\\BlazorApp5.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-21T14:44:45.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T14:44:45.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "lineTable.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
               "RelativeToolTip": "BlazorApp5\\MES.Examples.Data\\Models\\lineTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T13:14:44.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LineConfig.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\LineConfig.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Pages\\LineConfig.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\LineConfig.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Pages\\LineConfig.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-21T15:51:51.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PLCList.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\PLCList.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Pages\\PLCList.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\PLCList.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Pages\\PLCList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T07:28:20.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "BlazorApp5\\wwwroot\\app.css",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\wwwroot\\app.css",
+              "RelativeToolTip": "BlazorApp5\\wwwroot\\app.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-22T01:48:44.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "BlazorApp5\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-22T06:01:46.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BOMList.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\BOMList.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Pages\\BOMList.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\BOMList.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Pages\\BOMList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T05:47:52.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BOMImport.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\BOMImport.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Pages\\BOMImport.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\Pages\\BOMImport.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\Pages\\BOMImport.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T07:29:45.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\App.razor",
+              "RelativeDocumentMoniker": "BlazorApp5\\Components\\App.razor",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Components\\App.razor",
+              "RelativeToolTip": "BlazorApp5\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T06:01:01.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "LineItemGroup.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
               "RelativeToolTip": "BlazorApp5\\MES.Examples.Data\\Models\\LineItemGroup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -124,28 +289,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "PeriodicTableController.cs",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Controllers\\PeriodicTableController.cs",
+              "DocumentMoniker": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Controllers\\PeriodicTableController.cs",
               "RelativeDocumentMoniker": "BlazorApp5\\Controllers\\PeriodicTableController.cs",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Controllers\\PeriodicTableController.cs",
+              "ToolTip": "D:\\C\u002B\u002B\u002B\u002B\\git\\BlazorApp5\\BlazorApp5\\Controllers\\PeriodicTableController.cs",
               "RelativeToolTip": "BlazorApp5\\Controllers\\PeriodicTableController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAswGwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T13:07:17.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.razor",
-              "DocumentMoniker": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "BlazorApp5\\Components\\Pages\\Home.razor",
-              "ToolTip": "D:\\GithubR\\BlazorApp5\\BlazorApp5\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "BlazorApp5\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-21T15:51:51.563Z",
               "EditorCaption": ""
             }
           ]

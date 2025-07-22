@@ -30,32 +30,32 @@ namespace BlazorApp5.MES.Examples.Data
                 {
                   ""LineItems"": [
                     {
-                      ""Customer"": ""CustomerA"",
-                      ""lineName"": ""Line1"",
-                      ""partClass"": ""ClassX"",
-                      ""csfileName"": ""FileA.cs""
+                      ""Customer"": ""RAPA"",
+                      ""lineName"": ""PRAV"",
+                      ""partClass"": ""Valve"",
+                      ""csfileName"": ""PRV.cs""
                     },
                     {
-                      ""Customer"": ""CustomerA"",
-                      ""lineName"": ""Line2"",
-                      ""partClass"": ""ClassY"",
-                      ""csfileName"": ""FileB.cs""
+                      ""Customer"": ""Bosch"",
+                      ""lineName"": ""EV"",
+                      ""partClass"": ""Motor"",
+                      ""csfileName"": ""EV.cs""
                     }
                   ]
                 },
                 {
                   ""LineItems"": [
                     {
-                      ""Customer"": ""CustomerB"",
-                      ""lineName"": ""Line3"",
-                      ""partClass"": ""ClassZ"",
-                      ""csfileName"": ""FileC.cs""
+                      ""Customer"": ""ZF"",
+                      ""lineName"": ""LOCK"",
+                      ""partClass"": ""lock"",
+                      ""csfileName"": ""LOCK.cs""
                     },
                     {
-                      ""Customer"": ""CustomerB"",
-                      ""lineName"": ""Line4"",
-                      ""partClass"": ""ClassX"",
-                      ""csfileName"": ""FileD.cs""
+                      ""Customer"": ""飞龙"",
+                      ""lineName"": ""小水泵"",
+                      ""partClass"": ""泵"",
+                      ""csfileName"": ""小水泵.cs""
                     }
                   ]
                 }

@@ -1,0 +1,71 @@
+﻿@page "/"
+@using System.Net.Http.Json
+@inject HttpClient httpClient
+@inject IHttpClientFactory HttpClientFactory
+@using BlazorApp5.ApiServers
+@inject ApiService ApiService
+@using BlazorApp5.MES.Examples.Data.Models
+
+
+
+<PageTitle>Line Config</PageTitle>
+<MudDataGrid T="LineItem" Items="@Elements" ReadOnly="false" EditMode="DataGridEditMode.Form"
+    Bordered="true" Dense="true" RowClick="@OnRowClick">
+    <Columns>
+        <PropertyColumn Property="x => x.Customer" Title="Customer" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="true" Icon="@Icons.Material.Filled.MoreVert" Color="Color.Warning"/>
+        <PropertyColumn Property="x => x.lineName" Class="my-table" HeaderClass="mud-theme-dark"/>
+        <PropertyColumn Property="x => x.partClass" Class="my-table" HeaderClass="mud-theme-dark"/>
+        <PropertyColumn Property="x => x.csfileName" Title="csfileName" Class="my-table" HeaderClass="mud-theme-dark"/>
+    </Columns>
+</MudDataGrid>
+
+<MudDialog @ref="dialog" Options="@dialogOptions" >
+    <TitleContent>
+        <MudText Typo="Typo.h6">参数配置页面</MudText>
+    </TitleContent>
+    <DialogContent>
+        @if (selectedItem != null)
+        {
+            <MudStack>
+                <MudTextField T="string" Label="Customer" Variant="Variant.Outlined" value ="@selectedItem.Customer" Style="width: 400px;"/>
+                <MudTextField T="string" Label="lineName" Variant="Variant.Outlined" value ="@selectedItem.lineName" Style="width: 400px;"/>
+                <MudTextField T="string" Label="partClass" Variant="Variant.Outlined" value ="@selectedItem.partClass" Style="width: 400px;"/>
+                <MudTextField T="string" Label="csfileName" Variant="Variant.Outlined" value ="@selectedItem.csfileName" Style="width: 400px;"/>
+            </MudStack>
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="CloseDialog">保存</MudButton>
+        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDialog">删除</MudButton>
+        <MudButton Variant="Variant.Outlined" OnClick="CloseDialog">取消</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    private IEnumerable<LineItem> Elements = new List<LineItem>();
+    private List<string> _events = new();
+    private MudDialog dialog = null!; // 对话框引用
+    private DialogOptions dialogOptions = new() { CloseButton = true }; // 对话框配置
+    private LineItem selectedItem = new LineItem(); // 存储当前选中行
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var httpClient = HttpClientFactory.CreateClient("ServerAPI");
+        Elements = await ApiService.GetTestElementAsync("ServerAPI", "webapi/linetable");
+    }
+
+        // 新增：行点击事件
+    private async Task OnRowClick(DataGridRowClickEventArgs<LineItem> args)
+    {
+        selectedItem = args.Item; // 存储当前点击的行数据
+        await dialog.ShowAsync(); // 显示对话框
+    }
+
+    // 新增：关闭对话框
+    private void CloseDialog()
+    {
+        dialog.CloseAsync();
+    }
+
+}
+

@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a, .btn-link {
@@ -57,4 +57,49 @@ h1:focus {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
+}
+/*??????????LineConfig??*/
+h1 {
+    text-align: center;
+}
+
+.mud-table-container {
+    border: 1px solid #e0e0e0; /* ???? */
+    border-radius: 4px; /* ???? */
+}
+
+.mud-table-header {
+    background-color: #f5f5f5; /* Header ??? */
+    color: #333; /* Header ???? */
+}
+
+.mud-table-row:hover {
+    background-color: #eee; /* ????????? */
+}
+
+/* ?????????????? */
+.mud-table-container thead tr:first-child {
+    background-color: #3f51b5; /* ???????????? Material Design ? indigo */
+    color: white; /* ???????? */
+}
+
+    /* ?????? Header ??????? */
+    .mud-table-container thead tr:first-child th {
+        color: white; /* ??? Header ???? */
+    }
+
+.mud-table th {
+    font-weight: bold !important;
+}
+.white-border-table {
+    border-collapse: collapse; /* ?????? */
+}
+
+    .white-border-table th,
+    .white-border-table td {
+        border: 1px solid white !important; /* ???? */
+    }
+
+.mud-data-grid-header .column-options-icon {
+    color:aliceblue !important;
 }

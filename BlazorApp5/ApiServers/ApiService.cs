@@ -1,7 +1,6 @@
-﻿using System.Net.Http;
+﻿using BlazorApp5.MES.Examples.Data.Models;
+using System.Net.Http;
 using System.Threading.Tasks;
-using MudBlazor.Examples.Data.Models;
-using MudBlazor.Examples.Data;
 
 
 namespace BlazorApp5.ApiServers
@@ -33,14 +32,14 @@ namespace BlazorApp5.ApiServers
             }
         }
 
-        public async Task<List<Element>> GetTestElementAsync(string httpclientName, string routName)
+        public async Task<List<LineItem>> GetTestElementAsync(string httpclientName, string routName)
         {
             var client = _httpClientFactory.CreateClient($"{httpclientName}");
             try
             {
                 var fullUrl = $"{client.BaseAddress}{routName}";
                 Console.WriteLine($"Request URL: {fullUrl}");
-                var response = await client.GetFromJsonAsync<List<Element>>($"{routName}");
+                var response = await client.GetFromJsonAsync<List<LineItem>>($"{routName}");
                 if (response == null)
                 {
                     throw new Exception("Response was null");

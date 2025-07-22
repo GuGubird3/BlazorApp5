@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="MudBlazor.Examples.Data\Elements.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="MudBlazor.Examples.Data\Elements.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MudBlazor" Version="8.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
