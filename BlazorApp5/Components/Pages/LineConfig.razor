@@ -9,10 +9,10 @@
 
 
 <PageTitle>Line Config</PageTitle>
-<MudDataGrid T="LineItem" Items="@Elements" ReadOnly="false" EditMode="DataGridEditMode.Form"
-    Bordered="true" Dense="true" RowClick="@OnRowClick">
+<MudDataGrid Class="white-grid-icons" T="LineItem" Items="@Elements" ReadOnly="false" EditMode="DataGridEditMode.Form"
+             Bordered="true" Dense="true" RowClick="@OnRowClick" >
     <Columns>
-        <PropertyColumn Property="x => x.Customer" Title="Customer" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="true" Icon="@Icons.Material.Filled.MoreVert" Color="Color.Warning"/>
+        <PropertyColumn Property="x => x.Customer" Title="Customer" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="true"/>
         <PropertyColumn Property="x => x.lineName" Class="my-table" HeaderClass="mud-theme-dark"/>
         <PropertyColumn Property="x => x.partClass" Class="my-table" HeaderClass="mud-theme-dark"/>
         <PropertyColumn Property="x => x.csfileName" Title="csfileName" Class="my-table" HeaderClass="mud-theme-dark"/>
@@ -26,18 +26,20 @@
     <DialogContent>
         @if (selectedItem != null)
         {
-            <MudStack>
-                <MudTextField T="string" Label="Customer" Variant="Variant.Outlined" value ="@selectedItem.Customer" Style="width: 400px;"/>
-                <MudTextField T="string" Label="lineName" Variant="Variant.Outlined" value ="@selectedItem.lineName" Style="width: 400px;"/>
-                <MudTextField T="string" Label="partClass" Variant="Variant.Outlined" value ="@selectedItem.partClass" Style="width: 400px;"/>
-                <MudTextField T="string" Label="csfileName" Variant="Variant.Outlined" value ="@selectedItem.csfileName" Style="width: 400px;"/>
+            <MudStack >
+                @foreach (var prop in selectedItem.GetType().GetProperties())
+                {
+                    <MudTextField T="string" Label="@prop.Name" Variant="Variant.Outlined" value="@(prop.GetValue(selectedItem)?.ToString() ?? string.Empty)" Style="width: 400px;" />
+                }
             </MudStack>
         }
     </DialogContent>
     <DialogActions>
-        <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="CloseDialog">保存</MudButton>
-        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDialog">删除</MudButton>
-        <MudButton Variant="Variant.Outlined" OnClick="CloseDialog">取消</MudButton>
+        <dev style="display: flex; justify-content: space-between; align-items: center; gap: 16px;  margin-left: 16px; margin-right: 16px;">
+            <MudButton Style="margin-left: auto;" Class="wide-button" Variant="Variant.Outlined" Color="Color.Primary" OnClick="CloseDialog">保存</MudButton>
+            <MudButton Style="margin: 0 auto;" Class="wide-button" Variant="Variant.Outlined" OnClick="CloseDialog">取消</MudButton>
+            <MudButton Style="margin-right: auto;" Class="wide-button" Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDialog">删除</MudButton>
+        </dev>
     </DialogActions>
 </MudDialog>
 
