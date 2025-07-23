@@ -2,6 +2,9 @@ using BlazorApp5.ApiServers;
 using BlazorApp5.Components;
 using BlazorApp5.MES.Examples.Data;
 using BlazorApp5.Servers;
+using BlazorApp5.SQLServer.Data;
+using BlazorApp5.SQLServer.Services;
+using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 using System.Text.Json;
 
@@ -48,6 +51,14 @@ builder.Services.AddSingleton(new JsonSerializerOptions
     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
     WriteIndented = true
 });
+
+// ????????
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ????????????
+builder.Services.AddScoped<LineInfoRepository>();
+builder.Services.AddScoped<LineItemService>();
 
 
 

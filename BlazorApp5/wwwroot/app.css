@@ -105,7 +105,7 @@ h1 {
 }
 .wide-button {
     min-width: 122px !important;
-    padding: 0 16px !important;
+    padding: 4px 16px !important;
 }
 
 .white-grid-icons .mud-icon-root {
