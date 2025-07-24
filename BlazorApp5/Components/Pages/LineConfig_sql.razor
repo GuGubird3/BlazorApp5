@@ -18,6 +18,7 @@
 <MudDataGrid Class="white-grid-icons" T="LineItem" Items="@Elements" ReadOnly="false" EditMode="DataGridEditMode.Form"
              Bordered="true" Dense="true" RowClick="@OnRowClick" >
     <Columns>
+        <PropertyColumn Property="x => x.Id" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="false"/>
         <PropertyColumn Property="x => x.Customer" Title="Customer" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="true"/>
         <PropertyColumn Property="x => x.lineName" Class="my-table" HeaderClass="mud-theme-dark"/>
         <PropertyColumn Property="x => x.partClass" Class="my-table" HeaderClass="mud-theme-dark"/>
@@ -35,16 +36,16 @@
             <MudStack >
                 @foreach (var prop in selectedItem.GetType().GetProperties())
                 {
-                    <MudTextField T="string" Label="@prop.Name" Variant="Variant.Outlined" value="@(prop.GetValue(selectedItem)?.ToString() ?? string.Empty)" Style="width: 400px;" />
+                <MudTextField T="string" Disabled="@(prop.Name == "Id")" Label="@prop.Name" Variant="Variant.Outlined" value="@(prop.GetValue(selectedItem)?.ToString() ?? string.Empty)" Style="width: 400px;" />       
                 }
             </MudStack>
         }
     </DialogContent>
     <DialogActions>
         <dev style="display: flex; justify-content: space-between; align-items: center; gap: 16px;  margin-left: 16px; margin-right: 16px;">
-            <MudButton Style="margin-left: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Primary" OnClick="CloseDialog">保存</MudButton>
+            <MudButton Style="margin-left: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Primary" OnClick="SaveItem">保存</MudButton>
             <MudButton Style="margin: 0 auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" OnClick="CloseDialog">取消</MudButton>
-            <MudButton Style="margin-right: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDialog">删除</MudButton>
+            <MudButton Style="margin-right: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Secondary" OnClick="DeleteItem">删除</MudButton>
         </dev>
     </DialogActions>
 </MudDialog>
@@ -68,8 +69,8 @@
     private async Task OnRowClick(DataGridRowClickEventArgs<LineItem> args)
     {
         selectedItem = args.Item; // 获取选中行的数据
-       await dialog.ShowAsync(); // 显示对话框
-    }  */  
+        await dialog.ShowAsync(); // 显示对话框
+        }  */  
 
 
     private async Task LoadData()
@@ -77,13 +78,13 @@
         Elements = await LineItemService.GetAllAsync();
         StateHasChanged();
     }
-    
+
     private void AddNewItem()
     {
         selectedItem = new LineItem();
 
     }
-    
+
     private async void OnRowClick(DataGridRowClickEventArgs<LineItem> args)
     {
         selectedItem = await LineItemService.GetByIdAsync(args.Item.Id);
@@ -92,7 +93,7 @@
             await dialog.ShowAsync(); // 显示对话框
         }
     }
-    
+
     private async Task SaveItem()
     {
         if (selectedItem != null)
@@ -109,7 +110,7 @@
                     await LineItemService.UpdateAsync(selectedItem);
                     Snackbar.Add("记录更新成功", Severity.Success);
                 }
-                
+                await CloseDialog();
                 await LoadData();
             }
             catch (Exception ex)
