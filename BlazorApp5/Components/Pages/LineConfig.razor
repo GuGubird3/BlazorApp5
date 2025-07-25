@@ -1,23 +1,40 @@
-﻿@page "/define"
+﻿@page "/"
 @using System.Net.Http.Json
 @inject HttpClient httpClient
 @inject IHttpClientFactory HttpClientFactory
 @using BlazorApp5.ApiServers
 @inject ApiService ApiService
-@using BlazorApp5.MES.Examples.Data.Models
-
+@inject LineItemService LineItemService
+@inject NavigationManager Navigation
+@using BlazorApp5.SQLServer.Services
+@inject LineItemService LineItemService
+@inject NavigationManager Navigation
+@using BlazorApp5.SQLServer.Models
+@inject ISnackbar Snackbar
+@using System.Reflection
+@using BlazorApp5.Components.Shared.Dialogs
+@inject IDialogService DialogService
 
 
 <PageTitle>Line Config</PageTitle>
+
 <MudDataGrid Class="white-grid-icons" T="LineItem" Items="@Elements" ReadOnly="false" EditMode="DataGridEditMode.Form"
              Bordered="true" Dense="true" RowClick="@OnRowClick" >
+
+
     <Columns>
+        <PropertyColumn Property="x => x.Id" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="false"/>
         <PropertyColumn Property="x => x.Customer" Title="Customer" Class="my-table" HeaderClass="mud-theme-dark font-weight: bold" Editable="true"/>
         <PropertyColumn Property="x => x.lineName" Class="my-table" HeaderClass="mud-theme-dark"/>
         <PropertyColumn Property="x => x.partClass" Class="my-table" HeaderClass="mud-theme-dark"/>
         <PropertyColumn Property="x => x.csfileName" Title="csfileName" Class="my-table" HeaderClass="mud-theme-dark"/>
     </Columns>
+
 </MudDataGrid>
+
+<MudStack> 
+    <MudButton class = "my-2 ml-auto" Variant="Variant.Filled" Size="Size.Large"  Color="Color.Dark"  OnClick = "AddNewItem">新建产线</MudButton>
+</MudStack>
 
 <MudDialog @ref="dialog" Options="@dialogOptions" >
     <TitleContent>
@@ -29,16 +46,20 @@
             <MudStack >
                 @foreach (var prop in selectedItem.GetType().GetProperties())
                 {
-                    <MudTextField T="string" Label="@prop.Name" Variant="Variant.Outlined" value="@(prop.GetValue(selectedItem)?.ToString() ?? string.Empty)" Style="width: 400px;" />
+                <MudTextField T="string" Disabled="@(prop.Name == "Id")" 
+                Label="@prop.Name" Variant="Variant.Outlined" 
+                Value="@(prop.GetValue(selectedItem)?.ToString() ?? string.Empty)"
+                ValueChanged="@(newValue => prop.SetValue(selectedItem, newValue))"
+                Style="width: 400px;" />       
                 }
             </MudStack>
         }
     </DialogContent>
     <DialogActions>
         <dev style="display: flex; justify-content: space-between; align-items: center; gap: 16px;  margin-left: 16px; margin-right: 16px;">
-            <MudButton Style="margin-left: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Primary" OnClick="CloseDialog">保存</MudButton>
+            <MudButton Style="margin-left: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Primary" OnClick="SaveItem">保存</MudButton>
             <MudButton Style="margin: 0 auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" OnClick="CloseDialog">取消</MudButton>
-            <MudButton Style="margin-right: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDialog">删除</MudButton>
+            <MudButton Style="margin-right: auto;" Class="wide-button px-4 py-2" Variant="Variant.Outlined" Color="Color.Secondary" OnClick="DeleteItem" Disabled="@(selectedItem.Id == 0)" >删除</MudButton>
         </dev>
     </DialogActions>
 </MudDialog>
@@ -48,25 +69,139 @@
     private List<string> _events = new();
     private MudDialog dialog = null!; // 对话框引用
     private LineItem selectedItem = new LineItem(); // 存储当前选中行
-    private readonly DialogOptions dialogOptions = new() { BackdropClick = false ,Position = DialogPosition.TopCenter};
+    private readonly DialogOptions dialogOptions = new() 
+    { 
+        BackdropClick = false ,
+        Position = DialogPosition.TopCenter,
+    };
 
 
     protected override async Task OnInitializedAsync()
     {
         //var httpClient = HttpClientFactory.CreateClient("ServerAPI");
-        Elements = await ApiService.GetTestElementAsync("ServerAPI", "webapi/linetable");
+        await LoadData();
         base.OnInitialized();
     }
+    // 动态获取属性值（用于显示）
+    private string GetPropertyValue(object obj, PropertyInfo prop)
+    {
+        return prop.GetValue(obj)?.ToString() ?? string.Empty;
+    }
 
-    // 新增：行点击事件
+    // 动态设置属性值（用于更新）
+    private void SetPropertyValue(object obj, PropertyInfo prop, string value)
+    {
+        if (prop.PropertyType == typeof(string))
+        {
+            prop.SetValue(obj, value);
+        }
+        else if (prop.PropertyType == typeof(int) && int.TryParse(value, out var intValue))
+        {
+            prop.SetValue(obj, intValue);
+        }
+        // 其他类型处理...
+    }
+    /*
     private async Task OnRowClick(DataGridRowClickEventArgs<LineItem> args)
     {
         selectedItem = args.Item; // 获取选中行的数据
-       await dialog.ShowAsync(); // 显示对话框
-    }    
+        await dialog.ShowAsync(); // 显示对话框
+        }  */  
 
 
-    // 新增：关闭对话框
+    private async Task LoadData()
+    {
+        Elements = await LineItemService.GetAllAsync();
+        StateHasChanged();
+    }
+
+    private async Task AddNewItem()
+    {
+        selectedItem = new LineItem();
+        await dialog.ShowAsync(); // 显示对话框
+    }
+
+    private async void OnRowClick(DataGridRowClickEventArgs<LineItem> args)
+    {
+        selectedItem = await LineItemService.GetByIdAsync(args.Item.Id);
+        if (selectedItem != null)
+        {
+            await dialog.ShowAsync(); // 显示对话框
+        }
+    }
+
+    private async Task SaveItem()
+    {
+        if (selectedItem != null)
+        {
+            try
+            {
+                if (selectedItem.Id == 0)
+                {
+                    await LineItemService.AddAsync(selectedItem);
+                    Snackbar.Add("记录添加成功", Severity.Success);
+                }
+                else
+                {
+                    await LineItemService.UpdateAsync(selectedItem);
+                    Snackbar.Add("记录更新成功", Severity.Success);
+                }
+                await CloseDialog();
+                await LoadData();
+            }
+            catch (Exception ex)
+            {
+                Snackbar.Add($"操作失败: {ex.Message}", Severity.Error);
+            }
+        }
+    }
+    
+    private async Task<bool> DeleteConfirmAsync()
+        {
+            var parameters = new DialogParameters<Confirm>
+            {
+                { x => x.ContentText, "Do you really want to delete this records?" },
+                { x => x.ButtonText, "Delete" },
+                { x => x.Color, Color.Error }
+            };
+
+            var options = new DialogOptions 
+            { 
+                CloseButton = true, 
+                MaxWidth = MaxWidth.ExtraSmall,
+                Position = DialogPosition.TopCenter
+            };
+
+            var dialogReference  = await DialogService.ShowAsync<Confirm>("Delete Confirmation", parameters,options);
+            var result = await dialogReference.Result;
+
+            return result?.Canceled == true;
+
+        }
+    private async Task DeleteItem()
+    {
+        if (selectedItem != null && selectedItem.Id > 0)
+        {
+            try
+            {
+                if(await DeleteConfirmAsync())
+                {
+                    Snackbar.Add("取消删除", Severity.Warning);
+                    return; // 用户取消删除
+                }
+                await LineItemService.DeleteAsync(selectedItem.Id);
+                Snackbar.Add("删除成功", Severity.Success);
+                await CloseDialog();
+                await LoadData();
+
+            }
+            catch (Exception ex)
+            {
+                Snackbar.Add($"删除失败: {ex.Message}", Severity.Error);
+            }
+        }
+    }
+    
     private async Task CloseDialog()
     {
         await dialog.CloseAsync();

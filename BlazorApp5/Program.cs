@@ -1,6 +1,5 @@
 using BlazorApp5.ApiServers;
 using BlazorApp5.Components;
-using BlazorApp5.MES.Examples.Data;
 using BlazorApp5.Servers;
 using BlazorApp5.SQLServer.Data;
 using BlazorApp5.SQLServer.Services;
@@ -10,6 +9,8 @@ using System.Text.Json;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.AddConsole();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -24,8 +25,6 @@ builder.Services.AddMudServices(); // This includes IEventListenerFactory
 
 
 builder.Services.AddSingleton<ItestService, testService>();
-
-builder.Services.AddScoped<ImesLineService, mesLineService>();
 
 builder.Services.AddCors(options =>
 {

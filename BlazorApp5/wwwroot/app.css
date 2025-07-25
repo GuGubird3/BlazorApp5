@@ -111,3 +111,21 @@ h1 {
 .white-grid-icons .mud-icon-root {
     color: white !important;
 }
+
+/* 高亮模糊背景 */
+.glowing-backdrop {
+    background: linear-gradient( to right, rgba(255, 105, 180, 0.15), /* 粉红色高亮 */
+    rgba(100, 220, 255, 0.15) /* 蓝色高亮 */
+    ) !important;
+    backdrop-filter: blur(8px) brightness(1.2); /* 关键模糊效果 */
+}
+
+/* 发光边缘对话框 */
+.glowing-dialog .mud-dialog-container {
+    background: rgba(30, 30, 40, 0.9) !important;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), /* 内边缘细线 */
+    0 0 30px rgba(100, 220, 255, 0.5), /* 蓝色外发光 */
+    0 0 60px rgba(255, 105, 180, 0.3); /* 粉红色扩散光 */
+    border-radius: 12px; /* 圆角增强模糊效果 */
+}

@@ -1,5 +1,4 @@
-﻿using BlazorApp5.MES.Examples.Data.Models;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 
 
@@ -31,31 +30,5 @@ namespace BlazorApp5.ApiServers
                 throw;
             }
         }
-
-        public async Task<List<LineItem>> GetTestElementAsync(string httpclientName, string routName)
-        {
-            var client = _httpClientFactory.CreateClient($"{httpclientName}");
-            try
-            {
-                var fullUrl = $"{client.BaseAddress}{routName}";
-                Console.WriteLine($"Request URL: {fullUrl}");
-                var response = await client.GetFromJsonAsync<List<LineItem>>($"{routName}");
-                if (response == null)
-                {
-                    throw new Exception("Response was null");
-                }
-                else
-                {
-                    return response;
-                }
-            }
-            catch (Exception ex)
-            {
-                // 处理异常
-                Console.WriteLine($"Error fetching test string: {ex.Message}");
-                throw;
-            }
-        }
-
     }
 }
