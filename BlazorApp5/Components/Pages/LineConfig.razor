@@ -2,8 +2,6 @@
 @using System.Net.Http.Json
 @inject HttpClient httpClient
 @inject IHttpClientFactory HttpClientFactory
-@using BlazorApp5.ApiServers
-@inject ApiService ApiService
 @inject LineItemService LineItemService
 @inject NavigationManager Navigation
 @using BlazorApp5.SQLServer.Services
@@ -74,11 +72,13 @@
         BackdropClick = false ,
         Position = DialogPosition.TopCenter,
     };
+    private HttpClient _httpClient = new HttpClient();
+
 
 
     protected override async Task OnInitializedAsync()
     {
-        //var httpClient = HttpClientFactory.CreateClient("ServerAPI");
+        _httpClient = HttpClientFactory.CreateClient("ServerAPI");//初始化，只创建一次HttpClient 实例
         await LoadData();
         base.OnInitialized();
     }
@@ -110,8 +110,8 @@
 
 
     private async Task LoadData()
-    {
-        Elements = await LineItemService.GetAllAsync();
+    {        
+        Elements = await _httpClient.GetFromJsonAsync<List<LineItem>>("api/lineitems") ?? new();
         StateHasChanged();
     }
 
@@ -123,9 +123,10 @@
 
     private async void OnRowClick(DataGridRowClickEventArgs<LineItem> args)
     {
-        selectedItem = await LineItemService.GetByIdAsync(args.Item.Id);
-        if (selectedItem != null)
+        var item = await _httpClient.GetFromJsonAsync<LineItem>($"api/lineitems/{args.Item.Id}");
+        if (item != null)
         {
+            selectedItem = item; // 获取选中行的数据
             await dialog.ShowAsync(); // 显示对话框
         }
     }
@@ -138,12 +139,12 @@
             {
                 if (selectedItem.Id == 0)
                 {
-                    await LineItemService.AddAsync(selectedItem);
+                    await _httpClient.PostAsJsonAsync("api/lineitems", selectedItem);
                     Snackbar.Add("记录添加成功", Severity.Success);
                 }
                 else
                 {
-                    await LineItemService.UpdateAsync(selectedItem);
+                    await _httpClient.PutAsJsonAsync($"api/lineitems/{selectedItem.Id}", selectedItem);
                     Snackbar.Add("记录更新成功", Severity.Success);
                 }
                 await CloseDialog();
@@ -189,7 +190,7 @@
                     Snackbar.Add("取消删除", Severity.Warning);
                     return; // 用户取消删除
                 }
-                await LineItemService.DeleteAsync(selectedItem.Id);
+                await _httpClient.DeleteAsync($"api/lineitems/{selectedItem.Id}");
                 Snackbar.Add("删除成功", Severity.Success);
                 await CloseDialog();
                 await LoadData();

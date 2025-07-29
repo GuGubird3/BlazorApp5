@@ -1,8 +1,7 @@
-using BlazorApp5.ApiServers;
 using BlazorApp5.Components;
-using BlazorApp5.Servers;
 using BlazorApp5.SQLServer.Data;
 using BlazorApp5.SQLServer.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 using System.Text.Json;
@@ -24,8 +23,6 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices(); // This includes IEventListenerFactory
 
 
-builder.Services.AddSingleton<ItestService, testService>();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -42,7 +39,7 @@ builder.Services.AddHttpClient("ServerAPI", client =>
     client.BaseAddress = new Uri("https://localhost:7026"); // 替换为实际 API 地址
 });
 
-builder.Services.AddSingleton<ApiService>();
+builder.Services.AddSingleton<LineItemService>();
 
 builder.Services.AddSingleton(new JsonSerializerOptions
 {
@@ -58,6 +55,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // ????????????
 builder.Services.AddScoped<LineInfoRepository>();
 builder.Services.AddScoped<LineItemService>();
+
+// 启用 Identity（新写法）
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false;
+})
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultUI(); // 添加默认UI支持
 
 
 

@@ -31,8 +31,21 @@
 <MudPaper Width="250px" Elevation="2" Style="border-radius: 0px 0 0px 5px !important;" Height="100%">
     <MudNavMenu Margin="Margin.Normal" Color="Color.Error">
         <MudNavGroup Title="产线配置" Icon="@Icons.Material.Filled.Settings" Expanded="false">
-            <MudNavLink Match="NavLinkMatch.All" Href="/" Icon="@Icons.Material.Filled.People" IconColor="Color.Success">Line List</MudNavLink>
-            <MudNavLink Match="NavLinkMatch.Prefix" Href="/plclist" Icon="@Icons.Material.Filled.Security" IconColor="Color.Info">PLC List</MudNavLink>
+
+            <MudNavLink Match="NavLinkMatch.All" Href="/" >
+                <span class="material-symbols-outlined" style="vertical-align: middle; margin-left: -12px;margin-right: 8px;">
+                    splitscreen_vertical_add
+                </span>
+                Line List
+            </MudNavLink>
+
+            <MudNavLink Match="NavLinkMatch.Prefix" Href="/plclist">
+                <span class="material-symbols-outlined " style="vertical-align: middle; margin-left: -12px;margin-right: 8px;">
+                    lan
+                </span>
+                Network
+            </MudNavLink>
+
         </MudNavGroup>
 
         <MudNavGroup Title="BOM配置" Icon="@Icons.Material.Filled.Settings" Expanded="false">

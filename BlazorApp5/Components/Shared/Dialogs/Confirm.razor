@@ -20,7 +20,7 @@
     [Parameter]
     public required Color Color { get; set; } = Color.Primary;
 
-    private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    private void Submit() => MudDialog?.Close(DialogResult.Ok(true));
 
-    private void Cancel() => MudDialog.Cancel();
+    private void Cancel() => MudDialog?.Cancel();
 }
