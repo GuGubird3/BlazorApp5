@@ -1,0 +1,77 @@
+﻿@page "/"
+@using BlazorApp5.SQLServer.Services
+@inject NavigationManager NavigationManager
+@inject AccountService AccountService
+@inject IAuthenticationService AuthService
+@using System.Security.Claims
+@using System.ComponentModel.DataAnnotations
+@attribute [AllowAnonymous]
+
+<div class="login-container">
+    <div class="login-box">
+        <h3>Login</h3>
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <InputText @bind-Value="loginModel.Username" id="username" class="form-control" />
+                <ValidationMessage For="@(() => loginModel.Username)" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <InputText @bind-Value="loginModel.Password" type="password" id="password" class="form-control" />
+                <ValidationMessage For="@(() => loginModel.Password)" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="alert alert-danger mt-3" >@errorMessage</div>
+            }
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new();
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        errorMessage = null;
+
+        if (AccountService.ValidateCredentials(loginModel.Username, loginModel.Password)) //验证账号和密码
+        {
+            var claims = new List<Claim>
+            {
+                new(ClaimTypes.Name, loginModel.Username)
+            };
+
+            var identity = new ClaimsIdentity(claims, "Cookies");
+            var principal = new ClaimsPrincipal(identity);
+
+            await AuthService.SignInAsync(principal);//登录用户
+
+            NavigationManager.NavigateTo("/lineconfig");
+        }
+        else
+        {
+            errorMessage = "Invalid username or password";
+        }
+    }
+
+    private class LoginModel
+    {
+        [Required(ErrorMessage = "Username is required")]
+        public string Username { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; }
+    }
+}
+
+
